@@ -7,9 +7,11 @@ import Find from '@/view/find/Find'
 import Mine from '@/view/mine/Mine'
 import Transition from '@/components/Transition'
 import BottomTabs from '@/components/BottomTabs'
+import VueScroller from 'vue-scroller'
 
-Vue.use(Router)
-Vue.use(VueResource)
+Vue.use(Router);
+Vue.use(VueResource);
+Vue.use(VueScroller);
 const router = new Router({
   mode: 'history',
   routes: [

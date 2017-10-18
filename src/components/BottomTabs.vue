@@ -2,7 +2,10 @@
   <div>
   <router-view></router-view>
   <div class="nav">
-     <router-link class="item" active-class="active" to="/home/home">首页</router-link>
+     <router-link class="item" active-class="active" to="/home/home">
+       <div><img src="" alt=""></div>
+       <div>首页</div>
+     </router-link>
      <router-link class="item" active-class="active" to="/home/product">产品</router-link>
      <router-link class="item" active-class="active" to="/home/find">发现</router-link>
      <router-link class="item" active-class="active" to="/home/mine">我的</router-link>
