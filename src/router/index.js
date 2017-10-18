@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import VueResource from 'vue-resource'
 import Home from '@/view/home/Home'
 import Product from '@/view/product/Product'
-import Find from '@/view/find/Find'
+// import Find from '@/view/find/Find'
 import Mine from '@/view/mine/Mine'
 import Transition from '@/components/Transition'
 import BottomTabs from '@/components/BottomTabs'
@@ -12,6 +12,7 @@ import VueScroller from 'vue-scroller'
 Vue.use(Router);
 Vue.use(VueResource);
 Vue.use(VueScroller);
+const Find = r => require.ensure([], () => r(require('@/view/find/Find')))
 const router = new Router({
   mode: 'history',
   routes: [

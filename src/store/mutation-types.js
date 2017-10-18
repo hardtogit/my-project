@@ -1,1 +1,2 @@
-export const TEST=TEST
+/**user***/
+export const TEST='TEST'

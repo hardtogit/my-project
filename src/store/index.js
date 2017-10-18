@@ -14,10 +14,10 @@ const state={
 export default new Vuex.Store({
   state,
   actions,
-  getters,
-  modules: {
-    cart,
-    products
+  modules:{
+    a:cart,
+    b:products
   },
+  getters,
   mutations,
 })
