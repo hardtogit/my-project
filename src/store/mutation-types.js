@@ -1,2 +1,2 @@
 /**user***/
-export const TEST='TEST'
+export const GET_BANNER='GET_BANNER'

@@ -1,9 +1,8 @@
-import * as types from './mutation-types'
+import Fetch from '../request/fetch'
+import * as TYPES from './mutation-types'
+export const getBanners = ({ commit }) => {
+  Fetch.banners().then(function (response) {
+    commit(TYPES.GET_BANNER,response)
+  })
 
-export const addToCart = ({ commit }, product) => {
-  if (product.inventory > 0) {
-    commit(types.ADD_TO_CART, {
-      id: product.id
-    })
-  }
 }

@@ -2,6 +2,7 @@
  * Fetch
  */
 import config    from '../../config/index'
+import resources from '../request/resources'
 const ROOT_URL = '/mobile_api/'
 // const ROOT_URL = '/'
 const transferObjectToFormat = (o) => {
@@ -60,16 +61,5 @@ const Fetch = (url, type, data, headers) => {
 
   })
 }
-
-passport(Fetch)
-setting(Fetch)
-assetStatistics(Fetch)
-interestRate(Fetch)
-find(Fetch)
-finance(Fetch)
-coin(Fetch)
-bonus(Fetch)
-scratcheCard(Fetch)
-shopping(Fetch)
-invite(Fetch)
+resources(Fetch)
 export default Fetch

@@ -9,7 +9,7 @@ import  mutations from './mutations'
 Vue.use(Vuex)
 
 const state={
-  num:12
+  banner:12
 }
 export default new Vuex.Store({
   state,

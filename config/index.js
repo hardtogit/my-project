@@ -30,10 +30,10 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/mobile_api': {
-        target: config.requestUrl,
+        target: 'http://demo-react.devbao.cn',
         changeOrigin: true,
         pathRewrite: {
-          '^/mobile_api': '/'
+          '^/mobile_api': '/mobile_api'
         }
       }
     },

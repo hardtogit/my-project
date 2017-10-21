@@ -1,25 +1,19 @@
 <template>
   <div class="hello">
-    <swiper :options="swiperOption" class="swiper-box">
-      <swiper-slide class="swiper-item">Slide 1</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 2</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 3</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 4</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 5</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 6</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 7</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 8</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 9</swiper-slide>
-      <swiper-slide class="swiper-item">Slide 10</swiper-slide>
+    <swiper  :options="swiperOption" class="swiper-box">
+
+      <swiper-slide  class="swiper-item" v-for="banner in banner.data">
+        <img class="banner" :src="banner.img" alt="">
+      </swiper-slide>
+
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-    我是首页{{num}}
     <div v-demo="{color: {color}}" >sssss</div>
   </div>
 </template>
 
 <script>
-  import {mapState, mapMutations, mapGetters} from 'vuex'
+  import {mapState, mapMutations, mapGetters,mapActions} from 'vuex'
   import * as TYPES from '../../store/mutation-types'
 //  import { swiper, swiperSlide } from 'vue-awesome-swiper'
   var s =require('swiper/dist/css/swiper.css')
@@ -31,10 +25,10 @@ export default {
       color: '#ff0000',
       swiperOption: {
         pagination: '.swiper-pagination',
-        direction: 'vertical',
+//        direction: 'vertical',
         slidesPerView: 1,
         paginationClickable: true,
-        spaceBetween: 30,
+//        spaceBetween: 30,
         mousewheelControl: true
       }
     }
@@ -48,19 +42,19 @@ export default {
 //  },
   computed: {
     ...mapState([
-      'num'
+      'banner'
     ]),
-    ...mapGetters(["outNum"])
+    ...mapGetters(["outNum"]),
   },
   methods:{
-    ...mapMutations([
-      TYPES.TEST
+    ...mapActions([
+      'getBanners'
     ]),
      initData(){
 //      console.log(this.TYPES.TEST)
 //      this.$store.commit(TYPES.TEST)
-      this.TEST()
-//       alert(this.outNum)
+      this.getBanners()
+       console.log(this.banner)
       console.log(this.$store.state)
     }
 
@@ -70,6 +64,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@import "../../assets/css/swiper.min.css";
-
+  .swiper-item .banner{
+    width: 100%;
+  }
+</style>
+<style>
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #fff;
+    opacity:1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color:#de3031 !important;
+  }
 </style>
