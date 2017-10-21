@@ -1,5 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
+var config = require('./rootUrl');
 
 module.exports = {
   build: {
@@ -29,7 +30,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/mobile_api': {
-        target: 'http://bug-api.devbao.cn',
+        target: config.requestUrl,
         changeOrigin: true,
         pathRewrite: {
           '^/mobile_api': '/'
