@@ -43,11 +43,11 @@
   methods:{
     getData:function (){
       console.log(this)
-      this.$http.get('/mobile_api/api/depositSupervise/projectLists?page=1&pageSize=100000000')
-        .then(function(response){  //接口返回数据
-         console.log(response)
-      },function(error){
-      })
+//      this.$http.get('/mobile_api/api/depositSupervise/projectLists?page=1&pageSize=100000000')
+//        .then(function(response){  //接口返回数据
+//         console.log(response)
+//      },function(error){
+//      })
     },
     test:function (index) {
       this.index=index;

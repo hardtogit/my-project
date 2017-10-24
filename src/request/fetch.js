@@ -3,6 +3,7 @@
  */
 import config    from '../../config/index'
 import resources from '../request/resources'
+import product from '../request/product'
 const ROOT_URL = '/mobile_api/'
 // const ROOT_URL = '/'
 const transferObjectToFormat = (o) => {
@@ -62,4 +63,5 @@ const Fetch = (url, type, data, headers) => {
   })
 }
 resources(Fetch)
+product(Fetch)
 export default Fetch
