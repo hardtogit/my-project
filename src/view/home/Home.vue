@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
-    我是首页111
+    我是首页
   </div>
 </template>
 
-<script>
+<script type="es6">
 export default {
   name: 'home',
   data () {

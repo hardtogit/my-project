@@ -3,10 +3,15 @@ import Router from 'vue-router'
 import VueResource from 'vue-resource'
 import Home from '@/view/home/Home'
 import Product from '@/view/product/Product'
+import DingcunA from '@/view/product/DingcunA'
+import DingcunB from '@/view/product/DingcunB'
+import DirectIndex from '@/view/product/DirectIndex'
+import Zhaizhuan from '@/view/product/Zhaizhuan'
 import Find from '@/view/find/Find'
 import Mine from '@/view/mine/Mine'
 import Transition from '@/components/Transition'
 import BottomTabs from '@/components/BottomTabs'
+import ProductTabs from '@/components/ProductTabs'
 
 Vue.use(Router)
 Vue.use(VueResource)
@@ -26,12 +31,34 @@ const router = new Router({
               redirect:'/home/home'
             },
             {
-            path:'/home/home',
-            component:Home
+              path:'/home/home',
+              component:Home
             },
             {
               path: '/home/product',
-              component: Product
+              component: ProductTabs,
+              children:[
+                {
+                  path:'/home/product',
+                  redirect: '/home/product/dingcunA'
+                },
+                {
+                  path:'/home/product/dingcunA',
+                  component: DingcunA
+                },
+                {
+                  path:'/home/product/dingcunB',
+                  component: DingcunB
+                },
+                {
+                  path:'/home/product/directIndex',
+                  component:DirectIndex
+                },
+                {
+                  path:'/home/product/zhaizhuan',
+                  component:Zhaizhuan
+                }
+              ]
             },
             {
               path: '/home/find',
@@ -52,9 +79,9 @@ const router = new Router({
   ]
 })
 router.beforeEach((to, from, next) => {
-  if (to.matched.length ===0) {
+  if(to.matched.length ===0) {
      next('/home');
-  } else {
+  }else {
     next();
   }
 });
