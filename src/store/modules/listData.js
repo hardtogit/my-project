@@ -16,7 +16,7 @@ const state = {
 
 // getters
 const getters = {
-  checkoutStatus: state => state.checkoutStatus
+  // checkoutStatus: state => state.checkoutStatus
 }
 
 // actions

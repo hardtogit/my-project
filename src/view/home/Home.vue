@@ -8,15 +8,19 @@
 
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
+    <div class="labels">
+      <div class="label"><img src="../../assets/images/gz.png" alt=""><a href="">国资控股</a></div>
+      <div class="label"><img src="../../assets/images/hj.png" alt=""><a href="">互金会员</a></div>
+      <div class="label"><img src="../../assets/images/yq.png" alt=""><a href="">邀请有礼</a></div>
+    </div>
+    <img class="new-img" src="../../assets/images/newHand.png" alt="">
     <div v-demo="{color: {color}}" >sssss</div>
   </div>
 </template>
 
 <script>
-  import {mapState, mapMutations, mapGetters,mapActions} from 'vuex'
+import {mapState, mapMutations, mapGetters,mapActions} from 'vuex'
   import * as TYPES from '../../store/mutation-types'
-//  import { swiper, swiperSlide } from 'vue-awesome-swiper'
-  var s =require('swiper/dist/css/swiper.css')
 export default {
   name: 'home',
   data () {
@@ -48,14 +52,16 @@ export default {
   },
   methods:{
     ...mapActions([
-      'getBanners'
+      'getBanners',
+      'getUser',
+      'getInfoData'
     ]),
      initData(){
 //      console.log(this.TYPES.TEST)
 //      this.$store.commit(TYPES.TEST)
-      this.getBanners()
-       console.log(this.banner)
-      console.log(this.$store.state)
+      this.getBanners();
+      this.getUser();
+       this.getInfoData({key:'LOGIN'})
     }
 
   }
@@ -63,9 +69,35 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="less">
   .swiper-item .banner{
     width: 100%;
+    display: block;
+  }
+  .labels{
+    display: flex;
+    background-color: #fff;
+    vertical-align: middle;
+  }
+  .label{
+    flex: 1;
+    text-align: center;
+    padding: 7px 0 8px 0;
+    vertical-align: middle;
+    img{
+      display: inline-block;
+      width: 15px;
+      margin-right: 2px;
+      vertical-align: middle;
+    }
+    a{
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+  .new-img{
+    width: 100%;
+    margin: 15px 0;
   }
 </style>
 <style>

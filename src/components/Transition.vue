@@ -30,6 +30,7 @@
     width:100%;
     height: 100%;
     transition: all .8s cubic-bezier(.55,0,.1,1);
+    background-color: #f0eff5;
   }
   .slide-left-enter, .slide-right-leave-active {
     opacity: 0;

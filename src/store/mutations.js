@@ -5,4 +5,7 @@ export default {
 	[TYPES.GET_BANNER](state,data) {
 	  state.banner=data.response
 	},
+  [TYPES.GET_USER](state,data) {
+    state.user=data.response
+  }
 }
