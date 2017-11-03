@@ -11,10 +11,18 @@ import Find from '@/view/find/Find'
 import Mine from '@/view/mine/Mine'
 import Transition from '@/components/Transition'
 import BottomTabs from '@/components/BottomTabs'
-import ProductTabs from '@/components/ProductTabs'
 
-Vue.use(Router)
-Vue.use(VueResource)
+import VueScroller from 'vue-scroller'
+var VueAwesomeSwiper = require('vue-awesome-swiper')
+require('swiper/dist/css/swiper.css')
+// const Find = r => require.ensure([], () => r(require('@/view/find/Find')))
+Vue.use(Router);
+Vue.use(VueResource);
+Vue.use(VueScroller);
+Vue.use(VueAwesomeSwiper)
+Vue.directive('demo',function (el,binding) {
+  el.style.color=binding.value.color
+})
 const router = new Router({
   mode: 'history',
   routes: [
@@ -36,7 +44,7 @@ const router = new Router({
             },
             {
               path: '/home/product',
-              component: ProductTabs,
+              // component: ProductTabs,
               children:[
                 {
                   path:'/home/product',
