@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bar">
-    <div class="btn-back" @click="back">
+    <div class="btn-back " @click="back">
       <img class="arrow-back" >
     </div>
 

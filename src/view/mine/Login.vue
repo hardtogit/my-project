@@ -4,15 +4,37 @@
     <div class="logo-container">
       <img class="logo" src="../../assets/images/logo.png" alt="">
     </div>
+    <div class="username">
+    <BaseInput label="账号" borderType="one" :mapValue="change" signal="手机号/邮箱/用户名"></BaseInput>
+    <BasePasswordInput label="密码" borderType="one" signal="请输入密码"></BasePasswordInput>
+    </div>
+    <BaseButton :submit="aa"></BaseButton>
   </div>
 </template>
 
 <script>
+  import BaseInput from '../../components/BaseInput.vue'
+  import BasePasswordInput from '../../components/BasePasswordInput.vue'
+  import BaseButton from '../../components/BaseButton.vue'
   export default {
     name: 'home',
+    components:{
+      BaseInput,
+      BasePasswordInput,
+      BaseButton
+    },
     data () {
       return {
-        msg: ''
+        msg: '',
+        userName:'',
+        password:''
+      }
+    },
+    methods:{
+      aa:function(){console.log('ss')},
+      change:(val)=>{
+        this.userName=val
+        console.log(val)
       }
     }
   }
@@ -39,5 +61,8 @@
      margin: 0 auto;
    }
  }
+  .username{
+    padding: 0 0 0 15px;
+  }
 
 </style>
