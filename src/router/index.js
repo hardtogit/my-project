@@ -55,6 +55,7 @@ const router = new Router({
           ]
         },
         {
+          name:'login',
           path: '/login',
           component: Login,
         }
@@ -72,12 +73,11 @@ router.beforeEach((to, from, next) => {
   } else {
     let toUrl = to.path;
     console.log(toUrl)
-    let fromUrl=from.path;
     if(routers.includes(toUrl)){
       const key = sessionStorage.getItem("bao-auth");
       if (!key) {
         if (toUrl != '/login') {
-          router.replace({path: '/login', params: {fromUrl: fromUrl}})
+          router.replace({name: 'login', params: {backUrl: toUrl}})
           return;
         }
       }

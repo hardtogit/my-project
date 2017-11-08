@@ -45,7 +45,6 @@ const mutations = {
     // clear cart
     // state.direct =response
     console.log(params)
-    state.listData.
     state[params.key]=params.data
   },
 }

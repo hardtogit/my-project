@@ -8,6 +8,7 @@ import mutationActionTypes from '../mutation-info-types-map'
 // initial state
 // shape: [{ id, quantity }]
 const state = {
+  'LOGIN':''
 }
 
 // getters
@@ -18,9 +19,11 @@ const getters = {
 // actions
 const actions = {
      getInfoData({commit},data){
-       console.log(data)
        mutationActionTypes[data.key].apiFn(data.params).then(function (response) {
-         commit("COMMIT",{key:data.key,data:response})
+         if(data.key=='LOGIN'&&response.response.code==100){
+           sessionStorage.setItem('bao-auth',true)
+         }
+         commit("COMMIT",{key:data.key,data:response.response})
        })
 
      }

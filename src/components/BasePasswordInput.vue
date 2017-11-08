@@ -5,7 +5,7 @@
   {{label}}
 </div>
 <div class="center">
-  <input class="input"   :type="inputType"  @focus="focus" @blur="blur" :placeholder="signal">
+  <input class="input"  :type="inputType"  @input="changeVal"  @focus="focus" @blur="blur" :placeholder="signal">
   </div>
   <img class="delete"  v-show="imgFlag" @click="changeType" :src="imgFlag" alt="">
   </div>
@@ -29,6 +29,9 @@ export default {
     borderType:{
       type:String,
       default:''
+    },
+    mapValue:{
+      type:Function
     }
   },
   data:function () {
@@ -40,11 +43,10 @@ export default {
     }
   },
   created(){
-    console.log(this._props)
   },
   watch:{
-    value:(val)=>{
-
+    value:function (val) {
+      this.mapValue(val)
     }
   },
   methods: {
@@ -56,6 +58,9 @@ export default {
     },
     clearInput(){
       this.value=''
+    },
+    changeVal(e){
+      this.value=e.target.value
     },
     changeType(){
       if(this.inputType=='password'){

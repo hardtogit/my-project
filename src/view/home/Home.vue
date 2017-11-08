@@ -39,6 +39,7 @@ export default {
   },
   created(){
       this.initData();
+
    },
 //  components:{
 //    swiper,
@@ -56,12 +57,11 @@ export default {
       'getUser',
       'getInfoData'
     ]),
+
      initData(){
 //      console.log(this.TYPES.TEST)
 //      this.$store.commit(TYPES.TEST)
       this.getBanners();
-      this.getUser();
-       this.getInfoData({key:'LOGIN'})
     }
 
   }

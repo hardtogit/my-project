@@ -9,6 +9,6 @@ const user=(Fetch)=>{
   // 获取用户信息
   Fetch.getUser = () => { return Fetch('user/info', 'GET') };
   //用户登录
-  Fetch.login =(data)=>{ return Fetch('passport/login','POST',data) }
+  Fetch.login =(data)=>{console.log(data) ; return Fetch('passport/login','POST',data) }
 }
 export default user

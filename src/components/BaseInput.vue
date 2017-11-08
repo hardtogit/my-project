@@ -4,7 +4,7 @@
          {{label}}
         </div>
         <div class="center">
-          <input class="input" v-model="value" type="text" v-on:change="change()"  @focus="focus" @blur="blur" :placeholder="signal">
+          <input class="input" v-model="value" type="text"  @focus="focus" @blur="blur" :placeholder="signal">
         </div>
         <img v-if="value" class="delete" @click="clearInput" src="./images/delete_icon.png" alt="">
    </div>
@@ -38,11 +38,11 @@
       }
     },
     created(){
-      console.log(this._props)
+      this.mapValue('sss')
     },
     watch:{
-      value:(val)=>{
-
+      value:function (val) {
+        this.mapValue(val)
       }
     },
     methods: {
@@ -54,9 +54,6 @@
       },
       clearInput(){
         this.value=''
-      },
-      change(){
-        console.log('s')
       }
     }
   }

@@ -5,7 +5,7 @@
  * use:auto...
  */
 const routers=[
-  '/home/home',
-  '/home/find'
+  // '/home/home',
+  '/home/mine'
 ]
 export default routers
