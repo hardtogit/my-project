@@ -17,7 +17,7 @@ require('swiper/dist/css/swiper.css')
 Vue.use(Router);
 Vue.use(VueResource);
 Vue.use(VueScroller);
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper);
 Vue.directive('demo', function (el, binding) {
   el.style.color = binding.value.color
 })
@@ -77,7 +77,7 @@ router.beforeEach((to, from, next) => {
       const key = sessionStorage.getItem("bao-auth");
       if (!key) {
         if (toUrl != '/login') {
-          router.replace({name: 'login', params: {backUrl: toUrl}})
+          router.push({name: 'login', params: {backUrl: toUrl}})
           return;
         }
       }

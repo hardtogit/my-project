@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import router from '../router'
 import * as actions from './actions'
 import * as getters from './getters'
 import cart from './modules/cart'
@@ -12,7 +13,8 @@ Vue.use(Vuex)
 
 const state={
   banner:12,
-  user:{}
+  user:{},
+  router:router
 }
 export default new Vuex.Store({
   state,

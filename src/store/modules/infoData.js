@@ -5,10 +5,12 @@
  * use:auto...
  */
 import mutationActionTypes from '../mutation-info-types-map'
+import router from 'vue-router'
 // initial state
 // shape: [{ id, quantity }]
 const state = {
-  'LOGIN':''
+  'LOGIN':'',
+  'USER':''
 }
 
 // getters
