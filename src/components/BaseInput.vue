@@ -80,6 +80,9 @@
       height: 44px;
       border:none;
       font-size: 16px;
+      &:focus{
+        outline: none;
+      }
     }
   }
   .one{

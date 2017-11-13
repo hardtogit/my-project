@@ -1,6 +1,6 @@
 <template>
   <div>
-  <router-view></router-view>
+  <router-view class="indexView"></router-view>
   <div class="nav">
      <router-link class="item" active-class="active" to="/home/home">
        <div class="icon icon-one"></div>

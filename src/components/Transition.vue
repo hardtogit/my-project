@@ -29,6 +29,7 @@
     position: absolute;
     width:100%;
     height: 100%;
+    overflow: scroll;
     transition: all .8s cubic-bezier(.55,0,.1,1);
     background-color: #f0eff5;
   }
