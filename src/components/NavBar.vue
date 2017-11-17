@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bar">
     <div class="btn-back " @click="back">
-      <img class="arrow-back" >
+      <span class="arrow-back" ></span>
     </div>
 
     <div class="title" v-if="title">
@@ -22,17 +22,16 @@
     },
     methods: {
       back () {
-    this.$router.push(this.backTo)
+      this.$router.back()
   }
   }
   }
 </script>
-<style scoped>
+<style scoped lang="less">
   .nav-bar {
     width: 100%;
-    height: 44px;
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
-    background-color: #fff;
+    height: 44px;s
+    background-color: #00a6e2;
     position: relative;
     z-index: 1000;
   }
@@ -42,18 +41,30 @@
     top: 0;
     left: 10px;
   }
-  .nav-bar .arrow-back {
-    width: 8px;
-    height: 16px;
-    float: left;
-    margin-top: 14px;
-    margin-right: 15px;
-  }
   .nav-bar .title {
     width: 100%;
     text-align: center;
     font-size: 16px;
     line-height: 46px;
-    color: #666;
+    color: #fff;
+  }
+  .nav-bar .arrow-back {
+    position: relative;
+    left: 10px;
+    top:10px
+  }
+  .arrow-back:after, .arrow-back:before {
+    border: 10px solid transparent;
+    border-right: 10px solid #00a6e2;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: ' ';
+  }
+  .arrow-back:before {
+    border-right-color: #fff;
+    right: 2px;
   }
 </style>

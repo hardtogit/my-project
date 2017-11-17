@@ -23,7 +23,7 @@
         <div class="center">
            账户安全保障中
         </div>
-        <div class="right">
+        <div class="right" @click="push('/user/analysis')">
           <span class="arrows"></span>
         </div>
       </div>
@@ -163,6 +163,9 @@
       ...mapActions([
         'getUser'
       ]),
+      push(url){
+        this.$router.push(url)
+      }
     }
 
   }

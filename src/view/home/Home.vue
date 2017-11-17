@@ -15,12 +15,14 @@
     </div>
     <img class="new-img" src="../../assets/images/newHand.png" alt="">
     <div v-demo="{color: {color}}" >sssss</div>
+    <VueEcharts></VueEcharts>
   </div>
 </template>
 
 <script>
 import {mapState, mapMutations, mapGetters,mapActions} from 'vuex'
   import * as TYPES from '../../store/mutation-types'
+import VueEcharts from '../../components/VueEcharts.vue'
 export default {
   name: 'home',
   data () {
@@ -41,10 +43,9 @@ export default {
       this.initData();
 
    },
-//  components:{
-//    swiper,
-//    swiperSlide
-//  },
+  components:{
+    VueEcharts
+  },
   computed: {
     ...mapState([
       'banner'

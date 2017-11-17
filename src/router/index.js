@@ -5,6 +5,7 @@ const Product = r => require.ensure([], () => r(require('@/view/product/Product'
 const Mine = r => require.ensure([], () => r(require('@/view/mine/Mine')))
 const Find = r => require.ensure([], () => r(require('@/view/find/Find')))
 const Login = r => require.ensure([], () => r(require('@/view/mine/Login')))
+const Analysis = r => require.ensure([], () => r(require('@/view/mine/user/Analysis')))
 const Transition = r => require.ensure([], () => r(require('@/components/Transition')))
 const BottomTabs = r => require.ensure([], () => r(require('@/components/BottomTabs')))
 import routers from './needAuthRouter'
@@ -53,6 +54,11 @@ const router = new Router({
           name:'login',
           path: '/login',
           component: Login,
+        },
+        {
+          name:'analysis',
+          path: '/user/analysis',
+          component: Analysis,
         }
       ]
     },
