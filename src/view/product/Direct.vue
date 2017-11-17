@@ -39,12 +39,8 @@
 //      this.bottom = 20
     },
     computed: {
-      ...mapState({GET_DIRCT_LIST:state=>state.listData.GET_DIRCT_LIST})
     },
     methods:{
-      ...mapActions([
-        'getListData'
-      ]),
       getData:function (){
         console.log(mapState)
         this.getListData({key:'GET_DIRCT_LIST'})

@@ -10,7 +10,6 @@ export const getBanners = ({ commit }) => {
   getUser=(context)=>{
     Fetch.getUser().then(function (response) {
       if(response.response.code=='0000'){
-        console.log(context)
         context.state.router.push('/login')
       }
       context.commit(TYPES.GET_USER,response)

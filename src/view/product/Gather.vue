@@ -1,6 +1,44 @@
 <template>
   <div class="gather">
-     我是聚点列表
+     <ul>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>我是聚点+列表</li>
+       <li>aaaaaaaaaa列表</li>
+       <li>aaaaaaaaaa列表</li>
+       <li>aaaaaaaaaa列表</li>
+       <li>aaaaaaaaaa列表</li>
+       <li>aaaaaaaaaa列表</li>
+     </ul>
   </div>
 </template>
 

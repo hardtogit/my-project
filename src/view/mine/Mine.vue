@@ -187,6 +187,7 @@
   }
   .content{
     padding-top: 50px;
+    padding-bottom: 10px;
   }
   .userAccount{
     overflow: hidden;

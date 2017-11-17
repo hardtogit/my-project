@@ -3,7 +3,7 @@
     <swiper  :options="swiperOption" class="swiper-box">
 
       <swiper-slide  class="swiper-item" v-for="banner in banner.data">
-        <img class="banner" :src="banner.img" alt="">
+        <img  class="banner" :src="banner.img" alt="">
       </swiper-slide>
 
       <div class="swiper-pagination" slot="pagination"></div>

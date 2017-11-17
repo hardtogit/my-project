@@ -57,7 +57,7 @@ const Fetch = (url, type, data, headers) => {
 
     })
     .then(
-      response => resolve({response}),
+      response => {resolve({response})},
       error => resolve({error}),
     )
 

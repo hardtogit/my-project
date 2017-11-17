@@ -66,6 +66,10 @@
   }
   .nav {
     display: flex;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 40px;
     background-color: #fff;
   .item {
     flex: 1;
@@ -85,10 +89,8 @@
   }
   }
   .container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 44px;
+    padding-top: 44px;
+    margin-bottom: 44px;
   }
 </style>
 <style lang="less">

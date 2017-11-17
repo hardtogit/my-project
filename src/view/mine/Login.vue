@@ -41,9 +41,6 @@
       ...mapState({GET_DIRCT_LIST: state => state.listData.GET_DIRCT_LIST, lOGIN: state => state.infoData.LOGIN})
     },
     watch: {
-      GET_DIRCT_LIST: function (val) {
-        console.log(val)
-      },
       lOGIN: function (val) {
         console.log(val)
         if (val.code != 100) {
@@ -56,7 +53,12 @@
           if (val.code == 305) message = '密码输入错误';
           alert(message)
         }else{
-          this.$router.replace({path:this.$route.params.backUrl})
+          if(this.$route.params.backUrl){
+            this.$router.replace({path:this.$route.params.backUrl})
+          }else{
+            this.$router.replace({path:'/home/mine'})
+          }
+
         }
       }
     },
@@ -77,7 +79,6 @@
       login: function () {
         let data = {username: this.userName, password:util.md5(this.password),clientType:'wap',device:'WAP',tokenId:'abc'};
         this.getInfoData({key: 'LOGIN', params: data})
-        this.getListData({key: 'GET_DIRCT_LIST'})
       }
     }
   }

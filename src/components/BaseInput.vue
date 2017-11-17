@@ -74,6 +74,7 @@
       height:19px;
       position: absolute;
       right: 6px;
+      top:14px
     }
     .input{
       width: 100%;
