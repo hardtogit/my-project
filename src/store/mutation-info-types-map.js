@@ -9,5 +9,8 @@ import Fetch from '../request/fetch'
 export default {
   [mutationTypes.LOGIN]: {//获取刮刮卡详情
     apiFn: Fetch.login
+  },
+  [mutationTypes.ANALYSIS]: {//获取刮刮卡详情
+    apiFn: Fetch.analysis
   }
 }

@@ -30,7 +30,7 @@
 <style scoped lang="less">
   .nav-bar {
     width: 100%;
-    height: 44px;s
+    height: 44px;
     background-color: #00a6e2;
     position: relative;
     z-index: 1000;

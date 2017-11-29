@@ -9,8 +9,9 @@ import router from 'vue-router'
 // initial state
 // shape: [{ id, quantity }]
 const state = {
-  'LOGIN':'',
-  'USER':''
+  'LOGIN':'',//登录信息
+  'USER':'',//用户数据
+  'ANALYSIS':''//资产分析
 }
 
 // getters
