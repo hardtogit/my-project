@@ -2,8 +2,8 @@
   <div class="hello">
     <swiper  :options="swiperOption" class="swiper-box">
 
-      <swiper-slide  class="swiper-item" v-for="banner in banner.data">
-        <img  class="banner" :src="banner.img" alt="">
+      <swiper-slide  class="swiper-item" v-for="item in banner.data">
+        <img  class="banner" :src="item.img" alt="">
       </swiper-slide>
 
       <div class="swiper-pagination" slot="pagination"></div>
@@ -15,7 +15,6 @@
     </div>
     <img class="new-img" src="../../assets/images/newHand.png" alt="">
     <div v-demo="{color: {color}}" >sssss</div>
-    <VueEcharts></VueEcharts>
   </div>
 </template>
 
@@ -44,7 +43,6 @@ export default {
 
    },
   components:{
-    VueEcharts
   },
   computed: {
     ...mapState([

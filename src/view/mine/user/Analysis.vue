@@ -28,7 +28,7 @@
     </div>
     </div>
     <div class="loading" v-else>
-      <PageLoading top="46" bottom="0"></PageLoading>
+      <PageLoading :top="46" :bottom="0"></PageLoading>
 
     </div>
   </div>
@@ -119,7 +119,7 @@
         this.$route.push({path:'user/ana'})
       },
       pop(){
-        this.$route.back()
+        this.$route.back({params:{method:'back'}})
       }
     }
   }

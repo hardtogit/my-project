@@ -37,7 +37,7 @@ const mutations = {
   ['COMMIT'] (state,params) {
     state[params.key]=params.data
   },
-}
+};
 
 export default {
   state,
